@@ -110,7 +110,8 @@ module.exports = {
       'blogbg': "url('/blogbg.jpg')",
       'topstate': "url('/planet.jpg')",
       'secondtopstate' : "url('/plane.jpeg')",
-      'thirdtopstate' : "url('/soldier.jpeg')"
+      'thirdtopstate' : "url('/soldier.jpeg')",
+      'fonmy': "url('/public/log.png')"
     },
     backgroundOpacity: (theme) => theme('opacity'),
     backgroundPosition: {
