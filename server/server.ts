@@ -27,7 +27,7 @@ app.prepare().then(() => {
 
   server.use(responses);
   server.use(scopePerRequest(container));
-  const files = 'controllers/*/.ts';
+  const files = 'controllers/**/*.ts';
   server.use(loadControllers(files, { cwd: __dirname }));
 
   server.all('*', (req, res) => {

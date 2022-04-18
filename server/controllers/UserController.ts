@@ -11,7 +11,7 @@ export default class UserController extends BaseContext {
     @route('/all')
     getAll(req: Request, res: Response) {
         const { UserService } = this.di;
-console.log('11111111')
+        
         const result = UserService.find()
             .then((data) => res.answer(data))
             .catch((err) => res.answer(null, err, 404))

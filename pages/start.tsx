@@ -12,23 +12,20 @@ export interface IStartState {
 }
 
 export default class Start extends React.Component<IStartProps, IStartState> {
-   
+
     constructor(props) {
         super(props);
         this.fetch = this.fetch.bind(this);
-     }
-     
-     fetch() {
+    }
+
+    fetch() {
         let fullUrl = 'http://localhost:3000' + '/' + 'api/users/all';
 
         const params: any = {
-            method:'GET',
+            method: 'GET',
             credentials: 'include',
-            headers: {
-                Authorization: 'bearer ',
-            },
         };
-return fetch(fullUrl, params)
+        return fetch(fullUrl, params)
             .then((response) => {
                 return response.json().then((json) => ({ json, response }));
             }).then(({ json, response }) =>
@@ -39,21 +36,19 @@ return fetch(fullUrl, params)
             );
 
     }
-    
+
     async componentDidMount() {
-      const data = await this.fetch();
-      console.log(data);
+        const data = await this.fetch();
+        console.log(data);
     }
 
- public render (){
-
- 
-    return (
-        <div>
-
-            <Layout>
+    public render() {
 
 
+        return (
+            <div>
+
+                <Layout>
 
 
 
@@ -61,11 +56,13 @@ return fetch(fullUrl, params)
 
 
 
-            </Layout>
-
-        </div>
 
 
-    )
-}
+                </Layout>
+
+            </div>
+
+
+        )
+    }
 }
