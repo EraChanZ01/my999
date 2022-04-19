@@ -19,19 +19,10 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
         }
     }
 
-    public render(
-
-
-
-
-
-
-
-
-    ) {
+    public render() {
         const { children } = this.props;
         return (
-            <div>
+            <div className = ''>
                 <div>
                     <Header />
 
@@ -43,8 +34,6 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
 
                 <Footer />
             </div>
-
-
         );
     }
 }

@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import Layout from '../Components/Layout/Layout'
 
@@ -31,12 +32,11 @@ const Home: NextPage = () => {
 
 
             <div className=" ">
-              <a href="/start">
+            <Link href="/start">
                 <button className=" w-[313px] h-[70px] mx-2 my-1 bg-white rounded-full text-purple-600 text-bold text-xl text-center hover:bg-purple-200">
                   КАК НАЧАТЬ ИГРАТЬ
                 </button>
-              </a>
-
+              </Link>
               </div>
               
               <img src="/online.png" width="90" className=" ml-20" />
@@ -49,37 +49,15 @@ const Home: NextPage = () => {
 
           </div>
         <div>
-          11
           <br/>
-          11
           <br/>
-          11
           <br/>
-          11
           <br/>
-          11
+          <br/>
         </div>
-           
-           
         </Layout >
-
-
       </div>
-
-
-
-
-
-
-
-
-
-
-
       <br />
-
-
-
     </div>
   )
 }
