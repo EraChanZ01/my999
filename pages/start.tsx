@@ -19,12 +19,24 @@ export default class Start extends React.Component<IStartProps, IStartState> {
     }
 
     fetch() {
-        let fullUrl = 'http://localhost:3000' + '/' + 'api/users/all';
+        let fullUrl = 'http://localhost:3000' + '/' + `api/users/save`;
 
         const params: any = {
-            method: 'GET',
+            method: 'POST',
             credentials: 'include',
+            headers: {
+                Authorization: 'bearer',
+            },
         };
+
+        const data = {
+            id: '625e8a406492012df27ae0a1',
+            role: 'vip-user'
+        };
+
+        params['headers']['content-type'] = 'application/json';
+        params['body'] = JSON.stringify(data);
+        console.log(params.body)
         return fetch(fullUrl, params)
             .then((response) => {
                 return response.json().then((json) => ({ json, response }));

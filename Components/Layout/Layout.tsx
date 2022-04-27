@@ -22,16 +22,13 @@ export default class Layout extends React.Component<ILayoutProps, ILayoutState> 
     public render() {
         const { children } = this.props;
         return (
-            <div className = ''>
-                <div>
+            <div className='h-full flex flex-col justify-between'>
+                <div className = 'max-w-5xl mx-auto'>
                     <Header />
-
                     <div>
-
                         {children}
                     </div>
                 </div>
-
                 <Footer />
             </div>
         );
