@@ -23,6 +23,9 @@ export class User {
     @prop({type: String})
     public image: string;
 
+    @prop({type: Number})
+    public balance: number;
+
     @prop({ type: Date , default:() => Date.now()})
     createdAt: Date;
 
