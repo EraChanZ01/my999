@@ -1,40 +1,41 @@
-import Link from 'next/link'
-
+import Link from "next/link";
 
 export default function Header() {
     return (
+        <header className="flex flex-row items-center justify-between">
+            <Link href="/">
+                <div >
+                    <img className="cursor-pointer" src="/gacha-club.png" width="100" />
+                </div>
+            </Link>     
 
-
-
-
-
-
-        <header className="flex spaxe-x-0">
-            <a href="http://localhost:3000/"><img className="mt-5" src="/gacha-club.png" width="100" /></a>
-
-            <ul className="absolute inset-x-0 top-9 h-[70px] border border-blue-500 mx-[395px] rounded-full flex drop-shadow-2xl" >
-                <li className="mt-5 ml-9 text-blace drop-shadow-2xl text-lg font-bold hover:text-purple-500">
-                    <a href="/start" target="_blank">Играть</a>
-
-                </li>
-                <li className="mt-5 ml-9  text-blace drop-shadow-2xl text-lg font-bold hover:text-purple-500">
-                    <a href="/server" target="_blank">Cервер</a>
-                </li>
-                <li className="mt-5 ml-9 text-blace drop-shadow-2xl text-lg font-bold hover:text-purple-500">
-                    <a href="/forum" target="_blank">Форум</a>
-                </li>
-                <li className="mt-5 ml-9 text-blace drop-shadow-2xl text-lg font-bold hover:text-purple-500">
-                    <a href="/buy" target="_blank">Купить Гачи</a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <Link href="/login">
-                    <button><img className="ml-[1050px] mt-12" src="/log.png" width="50" /></button>
-                    </Link>
-                </li>
-
-            </ul>
+            <div className="flex flex-row py-4 px-4 items-center justify-evenly w-2/3 border-2 border-blue-700 rounded-full  font-bold" >
+                <Link href="/start">
+                    <div className="text-blace drop-shadow-2xl text-lg font-bold hover:text-purple-500 cursor-pointer">
+                        Играть
+                    </div>
+                </Link>
+                <Link href="/server">
+                    <div className=" text-blace drop-shadow-2xl text-lg font-bold hover:text-purple-500 cursor-pointer">
+                        Cервер
+                    </div>
+                </Link>
+                <Link href="/forum">
+                    <div className="text-blace drop-shadow-2xl text-lg font-bold hover:text-purple-500 cursor-pointer">
+                        Форум
+                    </div>
+                </Link>
+                <Link href="/buy">
+                    <div className="text-blace drop-shadow-2xl text-lg font-bold hover:text-purple-500 cursor-pointer">
+                        Купить Гачи
+                    </div>
+                </Link>
+            </div>
+            <Link href="/login">
+                <div className = "cursor-pointer  border-2 rounded-full border-blue-700 p-3 flex items-center">
+                    <img  alt="" src="/log.png" width="40" />
+                </div>
+            </Link>  
         </header>
     )
 }

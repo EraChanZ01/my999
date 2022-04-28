@@ -11,7 +11,7 @@ export default class UserController extends BaseContext {
     @route('/all')
     getAll(req: Request, res: Response) {
         const { UserService } = this.di;
-        
+
         const result = UserService.find()
             .then((data) => res.answer(data))
             .catch((err) => res.answer(null, err, 404))
@@ -32,18 +32,18 @@ export default class UserController extends BaseContext {
     @route('/:id')
     getById(req: Request, res: Response) {
         const { UserService } = this.di;
-
+        
         const result = UserService.findById(req.params.id)
             .then((data) => res.answer(data))
             .catch((err) => res.answer(null, err, 404))
     }
 
     @POST()
-    @route('/save/:id')
+    @route('/save')
     save(req: Request, res: Response) {
         const { UserService } = this.di;
-
-        const result = UserService.save(req.body, req.params.id)
+        console.log(req)
+        const result = UserService.save(req.body, req.body.id)
             .then((data) => res.answer(data))
             .catch((err) => res.answer(null, err, 404))
     }
