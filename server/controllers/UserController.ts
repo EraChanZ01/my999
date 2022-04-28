@@ -18,6 +18,17 @@ export default class UserController extends BaseContext {
     }
 
     @GET()
+    @route('/save/all')
+    saveAll(req: Request, res: Response) {
+             const{ UserService } = this.di;
+
+             const result = UserService.findById(req.params.id)
+                   .then((data) => res.answer(data))
+                   .catch((err) => res.answer(null, err, 404))
+
+    }
+
+    @GET()
     @route('/:id')
     getById(req: Request, res: Response) {
         const { UserService } = this.di;

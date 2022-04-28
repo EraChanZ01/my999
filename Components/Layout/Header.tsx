@@ -1,3 +1,6 @@
+import Link from 'next/link'
+
+
 export default function Header() {
     return (
 
@@ -26,7 +29,9 @@ export default function Header() {
             </ul>
             <ul>
                 <li>
-                    <a href="/login" target="_blank"><img className="ml-[1050px] mt-12" src="/log.png" width="50" /></a>
+                    <Link href="/login">
+                    <button><img className="ml-[1050px] mt-12" src="/log.png" width="50" /></button>
+                    </Link>
                 </li>
 
             </ul>
